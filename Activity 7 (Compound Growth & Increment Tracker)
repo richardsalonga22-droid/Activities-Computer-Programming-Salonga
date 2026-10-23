@@ -1,0 +1,31 @@
+public class CompoundGrowthIncrementTracker {
+    public static void main(String[] args) {
+
+        double balance = 1000.00;
+
+        System.out.println("=== Compound Growth Tracker ===");
+        System.out.println("Initial Balance: " + balance);
+     
+        balance += 200;
+        System.out.println("After Step 1 (+200): " + balance);
+
+        balance *= 1.10;
+        System.out.println("After Step 2 (+10%): " + balance);
+
+        balance += 100;
+        System.out.println("After Step 3 (+100): " + balance);
+
+        balance *= 1.05;
+        System.out.println("After Step 4 (+5%): " + balance);
+        System.out.println("\n=== Postfix Increment (count++) ===");
+
+        int count = 5;
+
+        System.out.println("Value of count++: " + count++);
+        System.out.println("Value of count after count++: " + count);
+        System.out.println("\n=== Prefix Increment (++count) ===");
+        System.out.println("Value of ++count: " + (++count));
+        System.out.println("Value of count after ++count: " + count);
+
+    }
+}

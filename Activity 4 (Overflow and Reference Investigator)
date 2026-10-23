@@ -1,0 +1,58 @@
+public class OverflowReferenceInvestigator {
+    public static void main(String[] args) {
+
+       
+        byte number = 127;
+        System.out.println("=== Byte Overflow ===");
+        System.out.println("Before increment: " + number);
+        number++;
+
+        System.out.println("After increment: " + number);     
+        System.out.println("\n=== String Reference Investigation ===");
+
+
+        String str1 = new String("Hello");
+        String str2 = new String("Hello");
+        String str3 = "Hello";
+
+
+     
+        System.out.println("str1 == str2: " + (str1 == str2));      
+
+
+        System.out.println("str1.equals(str2): " + str1.equals(str2));      
+
+
+        System.out.println("str1 == str3: " + (str1 == str3));
+
+
+        System.out.println("str1.equals(str3): " + str1.equals(str3));
+
+
+        System.out.println("str2 == str3: " + (str2 == str3));    
+
+
+        System.out.println("str2.equals(str3): " + str2.equals(str3));  
+
+
+        System.out.println("\n=== Shared Array Reference ===");
+
+
+        int[] array1 = {10, 20, 30};
+        int[] array2 = array1;
+
+
+        System.out.println("Before modification:");
+        System.out.println("array1[0]: " + array1[0]);
+        System.out.println("array2[0]: " + array2[0]);
+
+
+        array2[0] = 99;
+
+
+        System.out.println("After modifying array2[0]:");
+        System.out.println("array1[0]: " + array1[0]);
+        System.out.println("array2[0]: " + array2[0]);
+       
+    }
+}

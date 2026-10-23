@@ -1,0 +1,21 @@
+public class PrecedencePuzzleSolver {
+    public static void main(String[] args) {
+
+        System.out.println("=== Precedence Puzzle Solver ===\n");
+
+        int a = 5;
+        int b = 3;
+
+        System.out.println("Puzzle 1: " + (a + b * 2 > 10 && a < b + 3));
+
+        int x = 4;
+
+        System.out.println("Puzzle 2: " + (++x * 2 == 10 || x-- < 5));
+        System.out.println("Value of x after Puzzle 2: " + x);
+
+        int n = 6;
+
+        System.out.println("Puzzle 3: " + (n-- > 6 || n * 2 == 10 && n < 6));
+        System.out.println("Value of n after Puzzle 3: " + n);
+    }
+}

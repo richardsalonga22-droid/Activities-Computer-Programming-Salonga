@@ -1,0 +1,18 @@
+public class TypeSafeShoppingCalculator {
+    public static void main(String[] args) {
+
+        int quantity = 3;
+        double unitPrice = 67.1;
+        String storeName = "Rk's Store";
+
+        double totalCost = quantity * unitPrice;
+    /* totalCost should be double, not an int,
+      because the total price can contain decimal values*/
+       
+        System.out.println("=== Shopping Summary ===");
+        System.out.println("Store Name: " + storeName);
+        System.out.println("Quantity: " + quantity);
+        System.out.println("Unit Price: " + unitPrice);
+        System.out.println("Total Cost: " + totalCost);
+    }
+}

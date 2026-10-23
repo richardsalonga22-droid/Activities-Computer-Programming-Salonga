@@ -1,0 +1,34 @@
+public class NestedLoginValidator {
+    public static void main(String[] args) {
+
+        String correctUsername = "rk2028";
+        String correctPassword = "pass2026";
+        boolean accountLocked = false;
+
+        String username = "rk2028";
+        String password = "pass2026";
+
+
+        System.out.println("=== Nested Login Validator ===");
+
+        if (username.equals(correctUsername)) {
+
+            if (password.equals(correctPassword)) {
+
+
+                if (!accountLocked) {
+                    System.out.println("Login successful! Welcome, " + username + ".");
+                } else {
+                    System.out.println("Login failed: Your account is locked.");
+                }
+
+            } else {
+                System.out.println("Login failed: Incorrect password.");
+            }
+
+
+        } else {
+            System.out.println("Login failed: Username not found.");
+        }
+    }
+}
